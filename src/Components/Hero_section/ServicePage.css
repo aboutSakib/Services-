@@ -1,0 +1,109 @@
+body {
+  font-family: "Hind Siliguri", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(75deg, #3832c5, #412b7c);
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.image-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.input-section {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.input-section h1 {
+  font-family: "Baloo Da 2", cursive;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.input-section p {
+  font-family: "HK Grotesk", sans-serif;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #2dbeff;
+}
+
+.location-input,
+.find-input {
+  width: 100%;
+  padding: 10px 10px 10px 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: "Hind Siliguri", sans-serif;
+}
+
+.search-button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px !important;
+  margin: 0 auto !important;
+  margin-top: 10px !important;
+  background-color: #2dbeff;
+  color: white;
+  cursor: pointer;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #1da1f2;
+}
+
+.Title_Anneshion {
+  color: #01f965;
+  font-weight: bold;
+  font-size: 50px;
+}

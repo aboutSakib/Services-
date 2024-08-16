@@ -1,0 +1,39 @@
+.container-fluid {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+.OurPopularServices {
+  background-image: url("../Featured Services/images/bg3.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service-card {
+  width: 18rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 10px;
+  margin: 0 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  border-bottom: 3px solid blue;
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+}
+
+.slick-dots li button:before {
+  color: rgb(219, 9, 76);
+  font-size: 14px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: green !important;
+  font-size: 24px;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}

@@ -1,0 +1,130 @@
+app.css * {
+  font-family: "Baloo Da 2", "HK Grotesk", "Hind Siliguri";
+}
+
+.title {
+  font-weight: bold;
+  color: rgb(7, 7, 141);
+  text-align: center;
+}
+
+.subTitle {
+  text-align: center;
+  font-weight: bold;
+  color: #354895;
+}
+
+.productSlide {
+  background-color: #ccc;
+  background-image: url("./images/-min.jpg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  padding: 38px 64px;
+  border: 3px solid #fff;
+  -webkit-backdrop-filter: blur(82.5px);
+  backdrop-filter: blur(82.5px);
+  border-radius: 20px;
+  position: relative;
+}
+
+.carousel-container {
+  padding: 20px;
+  background-image: url("./images/cool-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.carousel-inner {
+  display: flex;
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel-item-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.card {
+  flex: 1 0 21%;
+  margin: 0 10px;
+  border: none;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.badge {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.slick-arrow {
+  z-index: 1;
+  background-color: rgba(78, 5, 249, 0.898);
+  border-radius: 50%;
+  padding: 15px;
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slick-prev {
+  left: 13px;
+}
+
+.slick-next {
+  right: 13px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #354895;
+  transform: scale(1.2);
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: #4e05f9;
+}
+
+.card-text {
+  font-size: 16px;
+  line-height: 27px;
+  color: #354895;
+  font-family: "Baloo Da 2", "HK Grotesk", "Hind Siliguri";
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.custom-arrow {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.arrow-icon {
+  font-size: 1.5rem;
+}
+

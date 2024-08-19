@@ -1,4 +1,4 @@
-app.css * {
+* {
   font-family: "Baloo Da 2", "HK Grotesk", "Hind Siliguri";
 }
 
@@ -44,13 +44,6 @@ app.css * {
   justify-content: center;
 }
 
-.carousel-item-row {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
 .card {
   flex: 1 0 21%;
   margin: 0 10px;
@@ -66,11 +59,16 @@ app.css * {
   text-align: center;
 }
 
-.badge {
-  font-size: 12px;
-  margin-bottom: 5px;
+.card-text {
+  font-size: 16px;
+  line-height: 27px;
+  color: #354895;
+  font-family: "Baloo Da 2", "HK Grotesk", "Hind Siliguri";
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
+/* স্লিক আর্ক ও ডট স্টাইল */
 .slick-arrow {
   z-index: 1;
   background-color: rgba(78, 5, 249, 0.898);
@@ -107,24 +105,58 @@ app.css * {
   color: #4e05f9;
 }
 
-.card-text {
-  font-size: 16px;
-  line-height: 27px;
-  color: #354895;
-  font-family: "Baloo Da 2", "HK Grotesk", "Hind Siliguri";
-  font-weight: bold;
-  letter-spacing: 1px;
+@media (max-width: 1024px) {
+  .productSlide {
+    padding: 20px;
+  }
+
+  .carousel-inner {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 15px auto;
+    width: 90%;
+  }
 }
 
-.custom-arrow {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
+@media (max-width: 768px) {
+  .productSlide {
+    padding: 20px;
+  }
+
+  .carousel-inner {
+    flex-direction: column;
+  }
+
+  .card {
+    margin: 10px 33px;
+  }
+
+  .card-img-top {
+    border-radius: 15px 15px 0 0;
+  }
+
+  .title,
+  .subTitle {
+    font-size: 1.5rem;
+  }
 }
 
-.arrow-icon {
-  font-size: 1.5rem;
-}
+@media (max-width: 480px) {
+  .productSlide {
+    padding: 15px;
+  }
 
+  .card {
+    margin: 5px 10px;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .subTitle {
+    font-size: 1rem;
+  }
+}

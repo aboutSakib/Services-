@@ -4,17 +4,20 @@
   text-align: center;
   padding: 20px 0;
 }
+
 .OurPopularServices {
   background-image: url("../Featured Services/images/bg3.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 .service-card {
-  width: 18rem;
+  width: 100%; /* Ensure the card takes full width in smaller viewports */
+  max-width: 18rem; /* Maintain a maximum width */
+  margin: 0 auto; /* Center the card */
   border: 1px solid #e5e5e5;
   border-radius: 10px;
-  margin: 0 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
   border-bottom: 3px solid blue;
@@ -36,4 +39,17 @@
 
 .slick-slide {
   padding: 0 10px;
+}
+
+
+@media (max-width: 1024px) {
+  .service-card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    width: 100%;
+  }
 }

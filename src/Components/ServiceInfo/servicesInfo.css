@@ -1,0 +1,109 @@
+
+.service-info {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  transition: border-bottom 0.3s ease-in-out;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.service-info:hover {
+  border-bottom: 5px solid #3038b1bd;
+}
+
+.service-logo {
+  width: 110px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service-stats p {
+  margin: 5px 0;
+}
+
+.contact-btn {
+  background-color: #150831;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.contact-btn:hover {
+  background-color: #3038b1bd;
+}
+
+/* Service Details Styling */
+.service-details {
+  background-color: #0c0f27;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  position: relative;
+  transition: border-bottom 0.3s ease-in-out;
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 20px;
+}
+
+.service-details:hover {
+  border-bottom: 5px solid green;
+}
+
+/* Book Button Styling */
+.book-btn {
+  background-color: white;
+  color: #1387c0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.book-btn:hover {
+  background-color: #1387c0;
+  color: #fff;
+}
+
+.bookNow {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.bookNow:hover {
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-info,
+  .service-details {
+    margin-top: 20px;
+  }
+
+  .book-btn {
+    width: 100%;
+  }
+}

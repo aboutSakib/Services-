@@ -15,59 +15,49 @@ function FeaturedServices() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4,
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   };
 
   const slides = [
-    [
-      {
-        url: "constraction",
-        image: Constraction,
-        alt: "কনস্ট্রাকশন সার্ভিস ",
-        text: "কনস্ট্রাকশন সার্ভিস",
-      },
-      {
-        url: "waterService",
-        image: waterService,
-        alt: "পানির লাইন সার্ভিস",
-        text: "পানির লাইন সার্ভিস",
-      },
-      {
-        url: "electricalService",
-        image: ElectricalService,
-        alt: "ইলেকট্রিক সার্ভিস ",
-        text: "ইলেকট্রিক সার্ভিস",
-      },
-      {
-        url: "laptopService",
-        image: LaptopService,
-        alt: "ল্যাপটপ সার্ভিস",
-        text: "ল্যাপটপ সার্ভিস",
-      },
-    ],
-    [
-      {
-        image: Constraction,
-        alt: "কনস্ট্রাকশন সার্ভিস ",
-        text: "কনস্ট্রাকশন সার্ভিস",
-      },
-      {
-        image: waterService,
-        alt: "পানির লাইন সার্ভিস",
-        text: "পানির লাইন সার্ভিস",
-      },
-      {
-        image: ElectricalService,
-        alt: "ইলেকট্রিক সার্ভিস ",
-        text: "ইলেকট্রিক সার্ভিস",
-      },
-      {
-        image: LaptopService,
-        alt: "ল্যাপটপ সার্ভিস",
-        text: "ল্যাপটপ সার্ভিস",
-      },
-    ],
+    {
+      url: "constraction",
+      image: Constraction,
+      alt: "কনস্ট্রাকশন সার্ভিস ",
+      text: "কনস্ট্রাকশন সার্ভিস",
+    },
+    {
+      url: "waterService",
+      image: waterService,
+      alt: "পানির লাইন সার্ভিস",
+      text: "পানির লাইন সার্ভিস",
+    },
+    {
+      url: "electricalService",
+      image: ElectricalService,
+      alt: "ইলেকট্রিক সার্ভিস ",
+      text: "ইলেকট্রিক সার্ভিস",
+    },
+    {
+      url: "laptopService",
+      image: LaptopService,
+      alt: "ল্যাপটপ সার্ভিস",
+      text: "ল্যাপটপ সার্ভিস",
+    },
   ];
 
   return (
@@ -80,28 +70,20 @@ function FeaturedServices() {
       </p>
       <hr className="Line" />
       <Slider {...FeaturedServicesSettings} className="FeatureProductSlide">
-        {slides.map((slideSet, index) => (
-          <div key={index} className="carousel-inner">
-            <div className="carousel-item-row">
-              {slideSet.map((slide, index) => (
-                <div key={index} className="card">
-                  <Link to={`/service/${slide.url}`}>
-                    <img
-                      className="card-img-top"
-                      src={slide.image}
-                      alt={slide.alt}
-                    />
-                  </Link>
-
-                  <div className="card-body">
-                    <p className="card-text">
-                      <br />
-                      {slide.text}
-                    </p>
-                  </div>
+        {slides.map((slide, index) => (
+          <div key={index} className="carousel-item">
+            <Link to={`/service/${slide.url}`}>
+              <div className="card">
+                <img
+                  className="card-img-top"
+                  src={slide.image}
+                  alt={slide.alt}
+                />
+                <div className="card-body">
+                  <p className="card-text">{slide.text}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            </Link>
           </div>
         ))}
       </Slider>

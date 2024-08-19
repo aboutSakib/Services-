@@ -4,10 +4,10 @@ import ContactForm from "./Components/Contact Services/ContacServices";
 import FeaturedServices from "./Components/Featured Services/FeaturedServices";
 import ServicePage from "./Components/Hero_section/Hero";
 import HomeRoute from "./Components/Home Pages/HomeRoute";
+import LoginForm from "./Components/LoginForm/LoginForm";
 import ProductSlideShow from "./Components/ourService/ProductSlideshow";
 import SingleService from "./Components/ourService/SingleService";
 import PopularServices from "./Components/popular services/PopularServices";
-import ProductInformation from "./Components/ProducInformation/ProductInformation";
 
 const App = () => {
   return (
@@ -20,7 +20,8 @@ const App = () => {
         <Route path="/featuredservices" element={<FeaturedServices />} />
         <Route path="/popularservices" element={<PopularServices />} />
         <Route path="/contactform" element={<ContactForm />} />
-        <Route path="/service" element={<ProductInformation />} />
+        <Route path="/login" element={<LoginForm />} />
+        <Route path="/contact" element={<ContactForm />} />
       </Routes>
     </BrowserRouter>
   );

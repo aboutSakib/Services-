@@ -1,5 +1,6 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -14,55 +15,51 @@ function ProductSlideShow() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
+    slidesToShow: 4, 
     slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1, 
+          slidesToScroll: 1, 
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1, 
+        },
+      },
+    ],
   };
 
   const slides = [
-    [
-      {
-        image: ServiceImage,
-        alt: "কম্পিউটার সার্ভিস",
-        text: "কম্পিউটার সার্ভিস",
-      },
-      {
-        image: AcServiceImage,
-        alt: "এসি সার্ভিস",
-        text: "এসি সার্ভিস",
-      },
-      {
-        image: AirconditionarImage,
-        alt: "ফ্রিজ সার্ভিস",
-        text: "ফ্রিজ সার্ভিস",
-      },
-      {
-        image: Health,
-        alt: "হেলথ অ্যান্ড কেয়ার",
-        text: "হেলথ অ্যান্ড কেয়ার",
-      },
-    ],
-    [
-      {
-        image: ServiceImage,
-        alt: "কম্পিউটার সার্ভিস",
-        text: "কম্পিউটার সার্ভিস",
-      },
-      {
-        image: AcServiceImage,
-        alt: "এসি সার্ভিস",
-        text: "এসি সার্ভিস",
-      },
-      {
-        image: AirconditionarImage,
-        alt: "ফ্রিজ সার্ভিস",
-        text: "ফ্রিজ সার্ভিস",
-      },
-      {
-        image: Health,
-        alt: "হেলথ অ্যান্ড কেয়ার",
-        text: "হেলথ অ্যান্ড কেয়ার",
-      },
-    ],
+    {
+      url: "computerservice",
+      image: ServiceImage,
+      alt: "কম্পিউটার সার্ভিস",
+      text: "কম্পিউটার সার্ভিস",
+    },
+    {
+      url: "acservice",
+      image: AcServiceImage,
+      alt: "এসি সার্ভিস",
+      text: "এসি সার্ভিস",
+    },
+    {
+      url: "airconditionar",
+      image: AirconditionarImage,
+      alt: "ফ্রিজ সার্ভিস",
+      text: "ফ্রিজ সার্ভিস",
+    },
+    {
+      url: "health",
+      image: Health,
+      alt: "হেলথ অ্যান্ড কেয়ার",
+      text: "হেলথ অ্যান্ড কেয়ার",
+    },
   ];
 
   return (
@@ -75,24 +72,22 @@ function ProductSlideShow() {
       </p>
       <hr className="Line" />
       <Slider {...settings} className="productSlide">
-        {slides.map((slideSet, index) => (
-          <div key={index} className="carousel-inner">
-            <div className="carousel-item-row">
-              {slideSet.map((slide, index) => (
-                <div key={index} className="card">
-                  <img
-                    className="card-img-top"
-                    src={slide.image}
-                    alt={slide.alt}
-                  />
-                  <div className="card-body">
-                    <p className="card-text">
-                      <br />
-                      {slide.text}
-                    </p>
-                  </div>
-                </div>
-              ))}
+        {slides.map((slide, index) => (
+          <div key={index} className="carousel-item">
+            <div className="card">
+              <Link to={`/service/${slide.url}`}>
+                <img
+                  className="card-img-top"
+                  src={slide.image}
+                  alt={slide.alt}
+                />
+              </Link>
+              <div className="card-body">
+                <p className="card-text">
+                  <br />
+                  {slide.text}
+                </p>
+              </div>
             </div>
           </div>
         ))}

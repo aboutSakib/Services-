@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import ElectricalServiceImages from "../Featured Services/images/Electian.jpeg";
 import AcServiceImage from "../ourService/images/ac.avif";
@@ -12,10 +13,47 @@ function PopularServices() {
     centerMode: true,
     infinite: true,
     centerPadding: "60px",
-    slidesToShow: 3,
+    slidesToShow: 4,
+    slidesToScroll: 1,
     speed: 500,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerPadding: "40px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "20px",
+        },
+      },
+    ],
   };
+
+  const services = [
+    {
+      title: "এসি সার্ভিস",
+      image: AcServiceImage,
+      url: "ac",
+    },
+    {
+      title: "ফ্রিজ সার্ভিস",
+      image: FreazServiceImage,
+      url: "freaz",
+    },
+    {
+      title: "ইলেকট্রিক সার্ভিস",
+      image: ElectricalServiceImages,
+      url: "electrical",
+    },
+  ];
 
   return (
     <div className="OurPopularServices">
@@ -31,24 +69,16 @@ function PopularServices() {
           <hr className="Line" />
         </div>
         <Slider {...settings}>
-          <Card className="service-card">
-            <Card.Img variant="top" src={AcServiceImage} />
-            <Card.Body>
-              <Card.Title>এসি সার্ভিস</Card.Title>
-            </Card.Body>
-          </Card>
-          <Card className="service-card">
-            <Card.Img variant="top" src={FreazServiceImage} />
-            <Card.Body>
-              <Card.Title> ফ্রিজ সার্ভিস</Card.Title>
-            </Card.Body>
-          </Card>
-          <Card className="service-card">
-            <Card.Img variant="top" src={ElectricalServiceImages} />
-            <Card.Body>
-              <Card.Title>ইলেকট্রিক সার্ভিস</Card.Title>
-            </Card.Body>
-          </Card>
+          {services.map((service, index) => (
+            <Link to={`/service/${service.url}`} key={index}>
+              <Card className="service-card">
+                <Card.Img variant="top" src={service.image} />
+                <Card.Body>
+                  <Card.Title>{service.title}</Card.Title>
+                </Card.Body>
+              </Card>
+            </Link>
+          ))}
         </Slider>
       </div>
     </div>

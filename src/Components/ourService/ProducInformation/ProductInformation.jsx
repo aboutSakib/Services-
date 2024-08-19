@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Availability from "./ProductInformation Components/Availability";
-import ClientReviews from "./ProductInformation Components/ClientReviews";
-import Description from "./ProductInformation Components/Description";
+import Availability from "./Product Components/Availability";
+import ClientReviews from "./Product Components/ClientReviews";
+import Description from "./Product Components/Description";
 import "./ProductInformation.css";
 
 const ProductInformation = () => {
@@ -28,7 +28,7 @@ const ProductInformation = () => {
 
   return (
     <div>
-      <div className="button-container">
+      <div className="button-container mt-4">
         <button
           className={`button ${
             currentComponent === "Description" ? "active" : ""
